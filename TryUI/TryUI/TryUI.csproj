@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Image\010.png" />
+    <None Remove="Image\020.png" />
+    <None Remove="Image\030.png" />
+    <None Remove="Image\040.png" />
+    <None Remove="Image\050.png" />
+    <None Remove="Image\060.png" />
+    <None Remove="Image\070.png" />
+    <None Remove="Image\080.png" />
+    <None Remove="Image\090.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Image\010.png" />
+    <EmbeddedResource Include="Image\020.png" />
+    <EmbeddedResource Include="Image\030.png" />
+    <EmbeddedResource Include="Image\040.png" />
+    <EmbeddedResource Include="Image\050.png" />
+    <EmbeddedResource Include="Image\060.png" />
+    <EmbeddedResource Include="Image\070.png" />
+    <EmbeddedResource Include="Image\080.png" />
+    <EmbeddedResource Include="Image\090.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="2.5.0.280555" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="App.xaml.cs">
+      <DependentUpon>*.xaml</DependentUpon>
+    </Compile>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="MainPage.xaml.cs">
+      <DependentUpon>*.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+</Project>
