@@ -12,8 +12,12 @@ namespace TryUI
 		public App ()
 		{
 			InitializeComponent();
-
-			MainPage = new TryUI.MainPage();
+            Page a = new NavigationPage(new MainPage())
+            {
+                BarBackgroundColor = Color.Blue
+            };
+            MainPage = a;
+            //MainPage = new TryUI.MainPage();
 		}
 
 		protected override void OnStart ()
